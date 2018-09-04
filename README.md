@@ -17,4 +17,4 @@
 
 | 강좌           | 담당자         | 정리본            |
 | :------------ | :----------- | ------------------- |
-| 1강. 사용중인 파이썬의 버전을 알자    | 박민호 | [1강 정리본](./team1/BetterWay1-python_version-minhopark.md    |
+| 1강. 사용중인 파이썬의 버전을 알자    | 박민호 | [1강 정리본](./team1/BetterWay1-python_version-minhopark.md)    |
