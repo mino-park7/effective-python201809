@@ -38,4 +38,44 @@ sys.version_info(major=3, minor=4, micro=2, releaselevel='final', serial=0)
   * 파이썬에는 CPython, Jython, IronPython, PyPy 같은 다양한 런타임이 존재함
   * 시스템에서 파이썬을 실행하는 명령이 사용하고자 하는 파이썬 버전인지 확이 필요
   * 파이썬 3 추천
+---
 
+## 추가 정리 - python runtime
+
+1. CPython
+    - C로 짜여진 파이썬
+    - 우리가 가장 흔히 쓰는 파이썬 인터프리터 - 파이썬은 C로 짜여져 있다!
+    - Global Interpreter Lock로 인한 멀티쓰레딩 이슈가 있음
+
+2. CPython
+    - 싸이썬은 파이썬의 superset
+      - 파이썬이 동적으로 결정되는 부분이 있어서 인터프리팅을 해야함, 그래서 느리다면?
+        - 그것을 정적으로 결정하고 컴파일하자! -
+    - 인터프리팅이 느리다 > 컴파일이 필요하다 > 모두 다 할 필요가...? > 속도에 치명적인 영향을 주는 부분만 컴파일하자!
+
+3. PyPy
+    - 파이썬으로 작성된 파이썬 인터프리터
+    - **JIT** 기술을 활용해 **Cpython보다 빠름!**
+      - JIT?: Just In Time 컴파일러
+        - 파이썬 바이트코드를 인터프리팅 하다가, 자주 사용되는 부분은 **컴파일**함. 즉 처음에는 느리게 돌아가지만, 점점 빨라 짐
+    - 현재 파이썬 구현체중 가장 각광받는 중
+
+4. Stackless python
+    - CPython 구현 시, 파이썬의 함수 호출 스택을 C의 스택에 그대로 얹음
+      - 파이썬에서 메모리를 얼마나 쓸 수 있는지와 상관없이 **C 스택을 꽉 채우면 스택 오버플로 에러가 뜬다**
+      - 파이썬 프로그램의 호출 스택(프로그램의 실행흐름)을 CPython 스스로 제어 할 수 없어서 **코루틴** 등 실행 흐름을 제어하는 언어 기능을 쓸 수 없음
+        - 코루틴?: caller가 함수를 call하고, 함수가 caller에게 값을 return하면서 종료하는 것에 더해 return 하는 대신 suspend(or yeild)하면 caller가 나중에 resume하여 중단된 지점부터 실행을 이어나갈 수 있음
+    - 이러한 단점들 때문에, Cpython 소스를 수정하여 C스택 쓰는 부분을 모두 교체한 것이 Stackless python
+      - PyPy에 밀려서 사양길...
+
+5. Jython
+    - java 위에서 돌라가는 파이썬
+    - GIL 이슈가 없어서 쓰레드 쓰기 편리함
+
+6. IPython, IPython Notebook
+    - IPython은 추가 기능을 제공하는 interactive shell
+      - 파이썬 기본 인터프리터의 업그레이드 버전
+    - IPython Notebook은 웹 기반 쉘 환경을 제공
+      - 파이썬 코드, 텍스트, 수학식, 그래프, 다양한 미디어들을 하나의 도큐먼트로 만들 수 있음
+
+[출처](http://khanrc.tistory.com/entry/다양한-Python들#fnref-f1)
