@@ -21,7 +21,10 @@
 | 2강. PEP 8 스타일 가이드를 따르자 | 박민호 | [2강 정리본](./team1/Betterway2-pep8guide-minhopark.md)|
 | 3강. bytes, str, unicode의 차이점을 알자    | 박민호  | [3강 정리본](./team1/BetterWay3-bytes_str_unicode-minhopark.md)  |
 | 4강. 복잡한 표현식 대신 헬퍼 함수를 작성하자   | 박민호  | [4강 정리본](./team1/BetterWay4-using_helper_function-minhopark.md)  |
+<<<<<<< HEAD
 | 5강. 시퀀스를 슬라이스하는 방법을 알자   | 박민호  | [5강 정리본](./team1/BetterWay5-sequence_slice-minhopark.md)  |
+=======
+>>>>>>> b03eb8856a773b2c7537553909ee1fe5d656c67d
 
 
 
