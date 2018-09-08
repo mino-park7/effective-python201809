@@ -1,10 +1,4 @@
----
-layout: "post"
-title: "이펙티브 파이썬 - 5. 시퀀스를 슬라이스하는 방법을 알자"
-date: "2018-09-07 21:48"
-category: effective python Study
-tag: [python, effective,]
----
+
 
 # 시퀀스를 슬라이스하는 방법을 알자
 
