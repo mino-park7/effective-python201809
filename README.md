@@ -23,7 +23,7 @@
 | 4강. 복잡한 표현식 대신 헬퍼 함수를 작성하자   | 박민호  | [4강 정리본](./team1/BetterWay4-using_helper_function-minhopark.md)  |
 | 5강. 시퀀스를 슬라이스하는 방법을 알자   | 박민호  | [5강 정리본](./team1/BetterWay5-sequence_slice-minhopark.md)  |
 | 6강. 한 슬라이스에 start, end, stride를 함께 쓰지 말자   | 박민호  | [6강 정리본](./team1/BetterWay6-minhopark.md)  |
-| 7강. map과 filter 대신 리스트 컴프리헨션을 사용하자   | 박민호  | [7강 정리본](./team1/BetterWay7-minhopark.md)]  |
+| 7강. map과 filter 대신 리스트 컴프리헨션을 사용하자   | 박민호  | [7강 정리본](./team1/BetterWay7-minhopark.md)  |
 | 8강. 리스트 컴프리헨션에서 표현식을 두 개 넘게 쓰지 말자   | 박민호  | [8강 정리본](./team1/BetterWay8-minhopark.md)  |
 
 
