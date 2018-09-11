@@ -13,16 +13,16 @@ Better Way 5 시퀀스를 슬라이스 하는 방법을 알자
 ** 기본 형태는 somelist[start:end]
 *** start 인덱스는 포함, end 인덱스는 제외
 
-'''bash
-  a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
-  print('First four:', a[:4])
-  print('Last four:', a[-4:])
-  print('Diddle two:', a[3:-3])
+'''python
+a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+print('First four:', a[:4])
+print('Last four:', a[-4:])
+print('Diddle two:', a[3:-3])
   
-  >>>
-  Fisrt four: ['a', 'b', 'c', 'd']
-  Last four: ['e', 'f', 'g', 'h']
-  Middle two: ['d', 'e']
+>>>
+Fisrt four: ['a', 'b', 'c', 'd']
+Last four: ['e', 'f', 'g', 'h']
+Middle two: ['d', 'e']
 '''
  리스트의 처음부터 슬라이스 할 때는 보기 편하게 인덱스 0을 생략
 * assert a[:5] == a[0:5]
