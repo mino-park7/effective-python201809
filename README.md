@@ -37,3 +37,4 @@
 | 1강. 사용중인 파이썬의 버전을 알자    | 노형철 | [1강 정리본](https://hcnoh.github.io/effective-python-way01/)    |
 | 2강. PEP 8 스타일 가이드를 따르자    | 노형철 | [2강 정리본](https://hcnoh.github.io/effective-python-way02/)    |
 | 3강. bytes, str, unicode의 차이점을 알자    | 노형철 | [3강 정리본](https://hcnoh.github.io/effective-python-way03/)    |
+| 4강. 복잡한 표현식 대신 헬퍼 함수를 작성하자    | 노형철 | [4강 정리본](https://hcnoh.github.io/effective-python-way04/)    |
