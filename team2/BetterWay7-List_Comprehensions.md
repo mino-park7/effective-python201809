@@ -4,8 +4,6 @@ map과 filter 대신 리스트 컴프리헨션을 사용하자
 * list comprehension(리스트 함축 표현식)이란? 한 리스트에서 다른 리스트를 만들어내는 문법
 ***
 
-# 기본
-* 
 ```python
 a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 squares = [x ** 2 for x in a]
