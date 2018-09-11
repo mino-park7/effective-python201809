@@ -12,7 +12,7 @@ Better Way 5 시퀀스를 슬라이스 하는 방법을 알자
 * 슬라이싱 문법
   * 기본 형태는 somelist[start:end]
     * start 인덱스는 포함, end 인덱스는 제외
-
+ 
 ```python
 a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
 print('First four:', a[:4])
