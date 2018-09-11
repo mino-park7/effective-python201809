@@ -80,3 +80,4 @@ Better Way 6 한 슬라이스에 start, end, stride를 함께 쓰지 말자
  * 파라미터 세 개를 사용해야 한다면 할당 두 개(하나는 슬라이스, 다른 하나는 스트라이드)를 사용하거나 내장 모듈 itertools의 islice를 사용할 것.
   
   
+  
