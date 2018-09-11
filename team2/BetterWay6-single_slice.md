@@ -72,11 +72,11 @@ Better Way 6 한 슬라이스에 start, end, stride를 함께 쓰지 말자
     * 프로그램에서 두 과정에 필요한 시간과 메모리가 충분하지 않다면 내장 모듈 itertools의 islice 메서드(Better Way 46 "내장 알고리즘과 자료 구조를 사용하자" 참고할 것
       * islice 메서드는 ㄴtart, end, stride에 음수 값을 허용하지 않음
       
-  ***
-  # 핵심정리
-  * 한 슬라이스에 start, end, stride를 지정하면 매우 혼란하다 혼란해
-  * 슬라이스에 start와 end 인덱스 없이 양수 stride 값을 사용할 것. 음수 stride 값은 가능하면 피하는게 좋음
-  * 한 슬라이스에 start, end, stride를 함께 사용하는 상황은 피할 것.
-  ** 파라미터 세 개를 사용해야 한다면 할당 두 개(하나는 슬라이스, 다른 하나는 스트라이드)를 사용하거나 내장 모듈 itertools의 islice를 사용할 것.
+***
+# 핵심정리
+* 한 슬라이스에 start, end, stride를 지정하면 매우 혼란하다 혼란해
+* 슬라이스에 start와 end 인덱스 없이 양수 stride 값을 사용할 것. 음수 stride 값은 가능하면 피하는게 좋음
+* 한 슬라이스에 start, end, stride를 함께 사용하는 상황은 피할 것.
+ * 파라미터 세 개를 사용해야 한다면 할당 두 개(하나는 슬라이스, 다른 하나는 스트라이드)를 사용하거나 내장 모듈 itertools의 islice를 사용할 것.
   
   
