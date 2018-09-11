@@ -13,7 +13,7 @@ Better Way 5 시퀀스를 슬라이스 하는 방법을 알자
 ** 기본 형태는 somelist[start:end]
 *** start 인덱스는 포함, end 인덱스는 제외
 
-'''python
+```python
 a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
 print('First four:', a[:4])
 print('Last four:', a[-4:])
@@ -23,17 +23,19 @@ print('Diddle two:', a[3:-3])
 Fisrt four: ['a', 'b', 'c', 'd']
 Last four: ['e', 'f', 'g', 'h']
 Middle two: ['d', 'e']
-'''
+```
+
  리스트의 처음부터 슬라이스 할 때는 보기 편하게 인덱스 0을 생략
-* assert a[:5] == a[0:5]
+* ```python assert a[:5] == a[0:5]```
 리스트의 끝까지 슬라이스할 때도 마지막 인덱스는 넣지 않아도 되므로 생략
-* assert a[5:] == a[5:len(a)]
+* ```python assert a[5:] == a[5:len(a)]```
 
  슬라이싱은 start와 end 인덱스가 리스트의 경계를 벗어나도 적절하게 처리
-* first_twenty_items = a[:20]
-* last_tenty_items = a[-20:]
+* ```python first_twenty_items = a[:20]```
+* ```python last_tenty_items = a[-20:]```
 
 * 슬라이스코드 예제
+```python
   a[:]    # ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
   a[:5]   # ['a', 'b', 'c', 'd', 'e']
   a[:-1]  # ['a', 'b', 'c', 'd', 'e', 'f', 'g']
@@ -42,16 +44,16 @@ Middle two: ['d', 'e']
   a[2:5]  #           ['c', 'd', 'e']
   a[2:-1] #           ['c', 'd', 'e', 'f', 'g']
   a[-3:-1]#                          ['f', 'g']
-  
+```
   
 ***
 
 # 예외나 뜻밖의 결과
-  
+```python
   a[20]
   >>>
   IndexError: list index our of range
-  
+```
 * 리스트의 인덱스를 음수 변수로 지정하면 슬라이싱으로 뜻밖의 결과를 얻는 몇가지 상황 중 하나 발생
 **   somelist[- n:]
 *** somelist[- 3:]처럼 n이 1보다 클 때는 제대로 동작
@@ -61,7 +63,7 @@ Middle two: ['d', 'e']
 * 슬라이싱의 결과는 완전히 새로운 리스트
 ** 원본 리스트에 들어있는 객체에 대한 참조는 유지
 ** 하지만 슬라이스한 결과를 수정해도 원본 리스트에 아무런 영향을 미치지 않음
-
+```python
   b = a[4:]
   print('Before:  ', b)
   b[1] = 99
@@ -72,11 +74,13 @@ Middle two: ['d', 'e']
   Before:   ['e', 'f', 'g', 'h']
   After:    ['e', 99, 'g', 'h']
   No change:['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
-  
+```
 * 할당에 사용하면 슬라이스는 원본 리스트에서 지정한 범위를 대체
 ** a, b = c[:2] 같은 튜플 할당과 달리 슬라이스 할당의 길이는 달라도 됨
 ** 할당받은 슬라이스의 앞뒤 값은 유지
 ** 리스트는 새로 들어온 값에 맞춰 늘어나거나 줄어 듬
+
+```python
   print('Before ', a)
   a[2:7] = [99, 22, 14]
   print('After ', a)
@@ -84,11 +88,15 @@ Middle two: ['d', 'e']
   >>>
   Before ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
   After  ['a', 'b', 99, 22, 14, 'h']
-  
+```
+
 * 시작과 끝 인덱스를 모두 생략하고 슬라이스하면 원본리스트의 복사본을 얻음
+```python
   b = a[:]
   assert b == a and b is not a
+```
 * 슬라이스에 시작과 끝 인덱스를 지정하지 않고 할당하면(새 리스트를 할당하지 않고) 슬라이스의 전체내용을 참조 대상의 복사본으로 대체
+```python
   b = a
   print('Before', a)
   a[:] = [101, 102, 103]
@@ -98,7 +106,7 @@ Middle two: ['d', 'e']
   >>>
   Before ['a', 'b', 99, 22, 14, 'h']
   After  [101, 102, 103]
-  
+```
 ***
 
 # 핵심정리
