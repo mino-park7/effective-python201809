@@ -47,7 +47,7 @@ sys.version_info(major=3, minor=4, micro=2, releaselevel='final', serial=0)
     - 우리가 가장 흔히 쓰는 파이썬 인터프리터 - 파이썬은 C로 짜여져 있다!
     - Global Interpreter Lock로 인한 멀티쓰레딩 이슈가 있음
 
-2. CPython
+2. Cython
     - 싸이썬은 파이썬의 superset
       - 파이썬이 동적으로 결정되는 부분이 있어서 인터프리팅을 해야함, 그래서 느리다면?
         - 그것을 정적으로 결정하고 컴파일하자! -
