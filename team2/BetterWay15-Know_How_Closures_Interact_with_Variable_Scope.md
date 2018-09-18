@@ -116,4 +116,4 @@ def sort_priority_python2(values, group):
 * 클로저에서 변수 할당하면 범위 바깥쪽에는 영향을 못 줌 
 * python3 에서는 nonlocal 문을 사용하여서 클로저를 감싸고 있는 범위의 변수도 수정할 수 있음을 알릴수있다 
 * python2 에서는 리스트 같은 수정가능한 값으로 이 문제를 우회할 수도 있다 
-* 간단한 함수이외에는 nonlocal 문을 
+* 간단한 함수이외에는 nonlocal 문을 쓰지 x 
