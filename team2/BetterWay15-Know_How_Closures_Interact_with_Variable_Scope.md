@@ -83,7 +83,7 @@ def sort_priority3(values, group):
 * 그러나, 간단한 함수가 아닌 경우에는 nonlocal 문을 사용하지 않는 것이 좋다. nonlocal 때문에 생긴 부작용은 디버깅하기 어려움!! 
 
 nonlocal 을 사용할 때 복잡해지기 시작하면 헬퍼 클래스로 상태를 감싸는 방법이 낫다. __call__ 에 대한 자세한 설명은 refer to upcoming BetterWay23
-``python
+'``python
 def sort_priority3(values, group):
     found = False
     def helper(x):
