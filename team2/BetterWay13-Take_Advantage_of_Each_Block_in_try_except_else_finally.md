@@ -61,3 +61,8 @@ def divide_json(path):
     finally: 
         handle.close()              # 항상 실행, else 블록에서 오류가 나더라도요
 ```
+
+요약 
+* try/finally 복합문을 이용하면 try 블록에서 예외가 발생하든 말든 정리코드를 실행시킬수 있다
+* else 블록은 try 블록에 있는 코드 양을 최소화할 수 있고, try/except 블록 과 성공시 실행할 코드를 분리해준다 
+* else 블록은 또한 try 와 finally 사이에 수행할 추가작업을 위해 사용할 수도 있다.
