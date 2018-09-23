@@ -25,6 +25,9 @@
 | 6강. 한 슬라이스에 start, end, stride를 함께 쓰지 말자   | 박민호  | [6강 정리본](./team1/BetterWay6-minhopark.md)  |
 | 7강. map과 filter 대신 리스트 컴프리헨션을 사용하자   | 박민호  | [7강 정리본](./team1/BetterWay7-minhopark.md)  |
 | 8강. 리스트 컴프리헨션에서 표현식을 두 개 넘게 쓰지 말자   | 박민호  | [8강 정리본](./team1/BetterWay8-minhopark.md)  |
+| 17강. 인수를 순회할 때는 방어적으로 하자   | 박민호  | [17강 정리본](./team1/python_code/betterway17_minhopark.ipynb)  |
+| 18강. 가변 위치 인수로 깔끔하게 보이게 하자   | 박민호  | [18강 정리본](./team1/python_code/betterway18_minhopark.ipynb)  |
+| 19강. 키워드 인수로 선택적인 동작을 제공하자   | 박민호  | [19강 정리본](./team1/python_code/betterway19_minhopark.ipynb)  |
 
 
 
