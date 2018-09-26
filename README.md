@@ -28,8 +28,8 @@
 | 17강. 인수를 순회할 때는 방어적으로 하자   | 박민호  | [17강 정리본](./team1/python_code/betterway17_minhopark.ipynb)  |
 | 18강. 가변 위치 인수로 깔끔하게 보이게 하자   | 박민호  | [18강 정리본](./team1/python_code/betterway18_minhopark.ipynb)  |
 | 19강. 키워드 인수로 선택적인 동작을 제공하자   | 박민호  | [19강 정리본](./team1/python_code/betterway19_minhopark.ipynb)  |
-| 20강. 동적 기본 인수를 지정하려면 None과 docstring을 사용하자 | 박민호  | [20강 정리본](.team1/python_code/betterway20_minhopark.ipynb) |
-| 21강. 키워드 전용 인수로 명료성을 강요하자 | 박민호  | [21강 정리본](.team1/python_code/betterway21_minhopark.ipynb) |
+| 20강. 동적 기본 인수를 지정하려면 None과 docstring을 사용하자 | 박민호  | [20강 정리본](./team1/python_code/betterway20_minhopark.ipynb) |
+| 21강. 키워드 전용 인수로 명료성을 강요하자 | 박민호  | [21강 정리본](./team1/python_code/betterway21_minhopark.ipynb) |
 
 
 
