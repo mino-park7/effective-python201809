@@ -104,7 +104,7 @@ print_args(1, 2, foo='bar', stuff='meep')
 Positional: (1, 2)
 Keyword: {'foo': 'bar', 'stuff': 'meep'}
 ```
-1. 위와같이 파이썬 2에서는 safe_division이 ** kwargs를 받게 만들어서 키워드 전용 신수를 받게 함
+1. 위와같이 파이썬 2에서는 safe_division이 **kwargs를 받게 만들어서 키워드 전용 신수를 받게 함
 2. 그런 다음 pop 메서드로 kwargs 딕셔너리에서 원하는 키워드 인수를 꺼냄
 3. 키가 없을 때의 기본값은 pop 메서드의 두번째 인수로 지정
 4. 마지막으로 kwargs에 더는 남아 있는 키워드가 없음을 확인하여 호출하는 쪽에서 올바르지 않은 인수를 넘기지 않게 함
