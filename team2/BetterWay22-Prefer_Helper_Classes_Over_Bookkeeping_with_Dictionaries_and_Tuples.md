@@ -21,8 +21,8 @@ class SimpleGradebook(object):
       grades = self._grades[name]
       return sum(grades) / len(grades)
 ```
-*
- *
+* 
+ * 
   * 클래스를 사용하는 방법(간단함)
 
 ```python
@@ -63,8 +63,8 @@ class BySubjectGradebook(object):
             count += len(grades)
         return total / count
 ```
-*
- *
+* 
+ * 
   * 위와 같이 모든 성적을 한곳에 저장하지 않고 과목별로 저장할 때 클래스를 사용하는 방법(아직 간단함)
 
 ```python
@@ -75,8 +75,8 @@ book.report_grade('Albert Einstein', 'Math', 65)
 book.report_grade('Albert Einstein', 'Gym', 90)
 book.report_grade('Albert Einstein', 'Gym', 95)
 ```
-*
- *
+* 
+ * 
     * 이어서 수업의 최종 성적에서 각 점수가 차지하는 비중을 매겨서 중간고사와 기말고사를 쪽지시험보다 중요하게 만들려고 한다면!?
     * 이 기능을 구현하는 방법 중 하나는 가장 안쪽 딕셔너리르 변경해서 과목(키)을 성적(값)에 매핑하지 않고,
     * 성적과 비중을 담은 튜플 (score, weight)에 매핑 하는 것
@@ -89,8 +89,8 @@ class WeightedGradebook(object):
         grdae_list = by_subject.setdefault(subject,  [])
         grade_list.append((score,weight))
 ```
-*
- *
+* 
+ * 
     * 값을 튜플로 바꾸기만 한 것 뿐
     * report_grade를 수정한 내역은 간단해 보이지만, average_grade 메서드는 루프 안에 루프가 생겨서 이해하기 어려워졌음
 
@@ -104,15 +104,15 @@ class WeightedGradebook(object):
                 # ...
         return score_sum / score_count
 ```
-*
- *
+* 
+ * 
     * 클래스를 사용하는 방법도 어려워 지기 시작
 
 ```python
 book.report_grade('Albert Einstein', 'Math', 80, 0.10)
 ```
-*
- *
+* 
+ * 
   * 이렇게 복잡해지면 딕셔너리와 튜플 대신 클래스의 계층 구조를 사용할 때가 된 것이라 보면 됌
       * 처음엔 성적에 비중을 적용하게 될지 몰랐으니 복잡하게 헬퍼 클래스를 추가 할 필요 까지는 없어 보였지만
       * 파이썬의 내장 딕셔너리와 튜플 타입을 쓰면 내부 관리용으로 층층이 타입을 추가하는 게 쉬워짐.
