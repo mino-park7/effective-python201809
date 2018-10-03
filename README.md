@@ -30,6 +30,12 @@
 | 19강. 키워드 인수로 선택적인 동작을 제공하자   | 박민호  | [19강 정리본](./team1/python_code/betterway19_minhopark.ipynb)  |
 | 20강. 동적 기본 인수를 지정하려면 None과 docstring을 사용하자 | 박민호  | [20강 정리본](./team1/python_code/betterway20_minhopark.ipynb) |
 | 21강. 키워드 전용 인수로 명료성을 강요하자 | 박민호  | [21강 정리본](./team1/python_code/betterway21_minhopark.ipynb) |
+| 22강. 딕셔너리와 튜플보다는 헬퍼 클래스로 관리하자 | 박민호  | [22강 정리본](./team1/python_code/betterway22_minhopark.ipynb) |
+| 23강. 인터페이스가 간단하면 클래스 대신 함수를 받자 | 박민호  | [23강 정리본](./team1/python_code/betterway23_minhopark.ipynb) |
+| 24강. 객체를 범용으로 생성하려면 @classmethod 다형성을 이용하자 | 박민호  | [24강 정리본](./team1/python_code/betterway24_minhopark.ipynb) |
+
+
+
 
 
 
