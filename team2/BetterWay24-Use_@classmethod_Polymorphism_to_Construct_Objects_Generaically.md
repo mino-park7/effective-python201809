@@ -182,6 +182,7 @@ BetterWay 24 객체를 범용으로 생성하려면 @classmethod 다형성을 �
             result = mapreduce(LineCountWorker, PathInputData, config)    
         ```
         * 이제 GenericInputData와 GenericWorker의 다른 서브클래스를 원하는 대로 만들어도 글루코드(glue code)를 작성할 필요가 없음
+        
 *** 
 # 핵심정리
 * 파이썬에서는 클래스별로 생성자를 한 개(__init__메서드)만 만들 수 있음
