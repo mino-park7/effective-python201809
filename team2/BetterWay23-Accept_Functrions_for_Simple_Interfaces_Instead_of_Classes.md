@@ -6,15 +6,14 @@ BetterWay 23 인터페이스가 간단하면 클래스 대신 함수를 받자
 * ex) list 타입의 sort 메서드는 정렬에 필요한 각 인덱스의 값을 결정하는 선택적인 key 인수를 받음
   * 다음 코드에서는 lambda 표현식을 key 후크로 넘겨서 이름 리스트를 길이로 정렬함
 
-```python
-names = ['Sorates', 'Archimedes', 'Plato', 'Aristotle']
-names.sort(key=lambda x: len(x))
-print(names)
+  ```python
+  names = ['Sorates', 'Archimedes', 'Plato', 'Aristotle']
+  names.sort(key=lambda x: len(x))
+  print(names)
 
->>>
-['Plato', 'Socrates', 'Aristotle', 'Archimedes']
-```
-*  
+  >>>
+  ['Plato', 'Socrates', 'Aristotle', 'Archimedes']
+  ```
   * 다른 언어에서라면 후크를 추상 클래스로 정의할 것이라고 예상할 수도 있지만
   * 파이썬의 후크 중 상당수는 인수와 반환 값을 잘 정의해놓은 단순히 상태가 없는 함수
     * 함수는 클래스보다 설명하기 쉽고 정의하기도 간단해서 후크로 쓰기에 이상적
@@ -27,33 +26,31 @@ print(names)
  * defaultdict에 넘길 함수는 딕셔너리에서 찾을 수 없는 키에 대응할 기본값을 반환해야하는데
  * 다음의 키를 찾을 수 없을 때마다 로그를 남기고 기본값으로 0을 반환하는 후크를 정의한 코드를 보고 참고할 것.
  
-```python
-def log_missing():
-  print('Key added')
-  return 0
-```
+ ```python
+ def log_missing():
+   print('Key added')
+   return 0
+ ```
+ * 초깃값을 담은 딕셔너리와 원하는 증가 값 리스트로 log_missing 함수를 두번(각각 'red'와 'orange'일 때) 실행하여 로그를 출력하게 해본다면
+ ```python
+ current = {'green': 12, 'blue': 3}
+ increments = [
+     ('red', 5),
+     ('blue', 17),
+     ('orange', 9),
+ ]
+ result = defaultdict(log_missing, current)
+ print('Before:', dict(result))
+ for key, amount in increments:
+     result[key] += amount
+ print('After: ', dict(result))
 
-* 초깃값을 담은 딕셔너리와 원하는 증가 값 리스트로 log_missing 함수를 두번(각각 'red'와 'orange'일 때) 실행하여 로그를 출력하게 해본다면
-
-```python
-current = {'green': 12, 'blue': 3}
-increments = [
-    ('red', 5),
-    ('blue', 17),
-    ('orange', 9),
-]
-result = defaultdict(log_missing, current)
-print('Before:', dict(result))
-for key, amount in increments:
-    result[key] += amount
-print('After: ', dict(result))
-
->>>
-Before: {'green': 12, 'blue': 3}
-Key added
-Key added
-After: {'orange': 9, 'green': 12, 'blue': 20, 'red': 5}
-```
+ >>>
+ Before: {'green': 12, 'blue': 3}
+ Key added
+ Key added
+ After: {'orange': 9, 'green': 12, 'blue': 20, 'red': 5}
+ ```
 
 * log_missing 같은 함수를 넘기면 결정 동작과 부작용을 분리하므로 API를 쉽게 구축하고 테스트할 수 있음
 * ex) 기본값 후크를 defaultdict에 넘겨서 찾을 수 없는 키의 총 개수를 센다고 할 때
@@ -75,16 +72,14 @@ def increment_with_report(current, increments):
         
     return result, added_count
 ```
-
 * defualtdict는 missing 후크가 상태를 유지한다는 사실을 모르지만,
 * increment_with_report 함수를 실행하면 튜플의 요소로 기대한 개수인 2를 얻음
  * 이는 간단한 함수를 인터페이스용으로 사용할 때 얻을 수 있는 또 다른 이점
  * 클로저 안에 상태를 숨기면 나중에 기능을 추가하기도 쉬움
-
-```python 
-result, count = increment_with_report(current, increments)
-assert count == 2
-```
+ ```python 
+ result, count = increment_with_report(current, increments)
+ assert count == 2
+ ```
   * 상태 보존 후크용을 클로저를 정의할 때 생기는 문제!
    * 상태가 없는 함수의 예제보다 이해하기 어려움
 
@@ -101,16 +96,16 @@ class CountMissing(object):
  * 다른 언어에서라면 이제 CountMissing의 인터페이스를 수용하도록 defaultdict를 수정해야 한다고 생각 할테지만
  * 파이썬에서는일급 함수 덕분에 객체로 CountMissing.missing 메서드를 직접 참조해서 defaultdict의 기본값 후크로 넘길 수 있음
   * 메서드가 함수 인터페이스를 충족하는 건 자명 하드ㅏㅏㅏ
-```python
-counter = CounterMissing()
-result = defaultdict(counter.missing, current) # 메서드 참조
-for key, amount in increments:
-    result[key] += amount
-assert counter.added == 2
-```
+ ```python
+ counter = CounterMissing()
+ result = defaultdict(counter.missing, current) # 메서드 참조
+ for key, amount in increments:
+     result[key] += amount
+ assert counter.added == 2
+ ```
+ * 헬퍼 클래스로 상태보존 클로저의 동작을 제공하는 방법이 앞에서 increment_with_report 함수를사용한 방법보다 명확
+ * 하지만 CountMissing 클래스 자체만으로는 용도가 무엇인지 바로 이해하기 어려움
 
-* 헬퍼 클래스로 상태보존 클로저의 동작을 제공하는 방법이 앞에서 increment_with_report 함수를사용한 방법보다 명확
-* 하지만 CountMissing 클래스 자체만으로는 용도가 무엇인지 바로 이해하기 어려움
 
 * 클래스에 __call__이라는 특별한 메서드를 정의해서 용도를 명확하게 해줌
 * __call__ 메서드는 객체를 함수처럼 호출할 수 있게 해줌
@@ -128,7 +123,7 @@ counter = BetterCountMissing()
 counter()
 assert callable(counter)
 ```
- * 다음은 BetterCountMissing 인스턴스를 defaultdict의 기본값 후크로 사용하여 딕셔너리에 없어서 새로 추가된 키의 개수를 알아내는 코드
+* 다음은 BetterCountMissing 인스턴스를 defaultdict의 기본값 후크로 사용하여 딕셔너리에 없어서 새로 추가된 키의 개수를 알아내는 코드
 ```python
 count = BetterCountMissing()
 result = defaultdict(counter, current) # __call__이 필요함
