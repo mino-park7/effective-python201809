@@ -138,6 +138,7 @@ safe_division_d(0, 0, unexpected=True)
 >>>
 TypeError: Unexpected **kwargs: {'unexpected': Ture}
 ```
+
 ***
 # 핵심정리
 * 키워드 인수는 함수 호출의 의도를 더 명확하게 해줌
