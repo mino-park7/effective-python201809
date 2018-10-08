@@ -58,5 +58,5 @@
 | 19강. 키워드 인수로 선택적인 동작을 제공하자   | 노형철  | [19강 정리본](https://hcnoh.github.io/2018-09-29-effective-python-way19)  |
 | 20강. 동적 기본 인수를 지정하려면 None과 docstring을 사용하자   | 노형철  | [20강 정리본](https://hcnoh.github.io/2018-09-30-effective-python-way20)  |
 | 25강. super로 부모 클래스를 초기화하자   | 노형철  | [25강 정리본](https://hcnoh.github.io/2018-10-06-effective-python-way25)  |
-| 26강. 믹스인 유틸리티 클래스에만 다중 상속을 사용하자   | 노형철  | [26강 정리본](https://hcnoh.github.io/2018-10-07-effective-python-way26  |
-| 27강. 공개 속성보다는 비공개 속성을 사용하자   | 노형철  | [27강 정리본](https://hcnoh.github.io/2018-10-08-effective-python-way27  |
+| 26강. 믹스인 유틸리티 클래스에만 다중 상속을 사용하자   | 노형철  | [26강 정리본](https://hcnoh.github.io/2018-10-07-effective-python-way26)  |
+| 27강. 공개 속성보다는 비공개 속성을 사용하자   | 노형철  | [27강 정리본](https://hcnoh.github.io/2018-10-08-effective-python-way27)  |
