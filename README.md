@@ -60,3 +60,5 @@
 | 25강. super로 부모 클래스를 초기화하자   | 노형철  | [25강 정리본](https://hcnoh.github.io/2018-10-06-effective-python-way25)  |
 | 26강. 믹스인 유틸리티 클래스에만 다중 상속을 사용하자   | 노형철  | [26강 정리본](https://hcnoh.github.io/2018-10-07-effective-python-way26)  |
 | 27강. 공개 속성보다는 비공개 속성을 사용하자   | 노형철  | [27강 정리본](https://hcnoh.github.io/2018-10-08-effective-python-way27)  |
+| 28강. 커스텀 컨테이너 타입은 collections.abc의 클래스를 상속받게 만들자   | 노형철  | [28강 정리본](https://hcnoh.github.io/2018-10-09-effective-python-way28)  |
+| 29강. 게터와 세터 메서드 대신에 일반 속성을 사용하자   | 노형철  | [29강 정리본](https://hcnoh.github.io/2018-10-09-effective-python-way29)  |
