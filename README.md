@@ -35,6 +35,7 @@
 | 24강. 객체를 범용으로 생성하려면 @classmethod 다형성을 이용하자 | 박민호  | [24강 정리본](./team1/python_code/betterway24_minhopark.ipynb) |
 | 45강. 지역 시간은 time이 아닌 datetime으로 표현하자 | 박민호 | [45강 정리본](./team1/python_code/betterway45_minhopark.ipynb) |
 | 46강. 내장 알고리즘과 자료 구조를 사용하자 | 박민호 | [46강 정리본](./team1/python_code/betterway46_minhopark.ipynb) |
+| 56강. unittest로 모든 것을 테스트 하자 | 박민호 | [56강 정리본](./team1/python_code/betterway56_minhopark.ipynb)
 
 
 
